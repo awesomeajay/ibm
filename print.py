@@ -16,18 +16,29 @@ Menu Options:
     3. Exit - Terminates the application
 """
 
-while True:
-    print('1. Start')
-    print('2. Settings')
-    print('3. Exit')
-    choice = input('Enter your choice: ')
-    if choice == '1':
-        # Start workflow
-        pass
-    elif choice == '2':
-        # Open settings
-        pass
-    elif choice == '3':
-        break
-    else:
-        print('Invalid choice')
+# Menu choice constants
+CHOICE_START = '1'
+CHOICE_SETTINGS = '2'
+CHOICE_EXIT = '3'
+
+try:
+    while True:
+        print('1. Start')
+        print('2. Settings')
+        print('3. Exit')
+        choice = input('Enter your choice: ').strip()
+        if not choice.strip():
+            print('Please enter a choice')
+            continue
+        if choice == CHOICE_START:
+            # Start workflow
+            pass
+        elif choice == CHOICE_SETTINGS:
+            # Open settings
+            pass
+        elif choice == CHOICE_EXIT:
+            break
+        else:
+            print('Invalid choice')
+except (KeyboardInterrupt, EOFError):
+    print('\nExiting gracefully...')
