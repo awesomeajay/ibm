@@ -1,3 +1,9 @@
-# workflow.py
+import random
+import string
 
-print("HELLO, IBM Bob Welcome Everyone!")
+length = 12
+
+characters = string.ascii_letters + string.digits + "!@#$%^&*"
+password = ''.join(random.choice(characters) for _ in range(length))
+
+print("Generated Password:", password)
