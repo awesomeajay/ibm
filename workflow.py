@@ -1,1 +1,0 @@
-print("Hello from IBM BOB Automation Test!")
