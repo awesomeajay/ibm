@@ -1,4 +1,1 @@
-from datetime import datetime
-
-print("Current Date and Time:")
-print(datetime.now())
+print("Hello from IBM BOB Automation Test!")
