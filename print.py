@@ -27,7 +27,7 @@ try:
         print('2. Settings')
         print('3. Exit')
         choice = input('Enter your choice: ').strip()
-        if not choice:
+        if not choice:  # Empty string check works because input is already stripped above
             print('Please enter a choice')
             continue
         if choice == CHOICE_START:
